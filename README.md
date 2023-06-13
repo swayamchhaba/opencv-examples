@@ -1,2 +1,3 @@
 # opencv-examples
-Contains the programs of cuvasol internship
+
+this repo contains opencv examples
