@@ -30,12 +30,21 @@ def rotate(img, angle, rotPoint = None):
 
 img = cv.imread('../content/cat_edited.jpg')
 frame_resized = rescaleFrame(img)
-# cv.imshow('Cat', frame_resized)
+cv.imshow('Cat', frame_resized)
 
 translated = translate(frame_resized, 100, 100)
 # cv.imshow('translated', translated)
 
 rotated = rotate(frame_resized, 45)
-cv.imshow('Rotated', rotated)
+# cv.imshow('Rotated', rotated)
+
+resized = cv.resize(img, (500, 500), interpolation=cv.INTER_CUBIC)
+# cv.imshow('Resized', resized)
+
+flip = cv.flip(frame_resized, 1)
+# cv.imshow('Flip', flip)
+
+cropped = frame_resized[200:400, 300:400]
+cv.imshow('cropped', cropped)
 
 cv.waitKey(0)
