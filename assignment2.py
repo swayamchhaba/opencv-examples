@@ -14,7 +14,7 @@ img = cv.imread('../content/man_with_multiple_men.jpeg')
 frame_resized = rescaleFrame(img)
 # cv.imshow('Man with phone', frame_resized)
 
-# gray = cv.cvtColor(frame_resized, cv.COLOR_BGR2GRAY)
+gray = cv.cvtColor(frame_resized, cv.COLOR_BGR2GRAY)
 cv.imshow('Gray man with phone', gray)
 
 haar_cascade = cv.CascadeClassifier('haar_face.xml')
